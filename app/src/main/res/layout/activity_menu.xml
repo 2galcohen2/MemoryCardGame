@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="comp.example.galcohen.myproj.MenuActivity">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textSize="80sp"
+        app:layout_constraintBottom_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spDiffLevel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/btn_dropdown"
+        android:layout_below="@id/tvTitle"
+        android:layout_marginBottom="8dp"
+        android:spinnerMode="dropdown"
+        android:entries="@array/difficulty_level"
+        android:prompt="@string/level_prompt" />
+
+    <Button
+        android:id="@+id/btPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_below="@id/spDiffLevel"
+        android:layout_marginBottom="17dp"
+        android:text="@string/play_button"
+        android:onClick="onPlayClicked"
+        android:textColor="#f8fdf9" />
+
+</RelativeLayout>
